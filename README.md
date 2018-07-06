@@ -1,1 +1,1 @@
-# projectLC
+# projectLG
