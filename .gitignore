@@ -1,0 +1,7 @@
+*~
+*.out
+*.aux
+*.bbl
+*.log
+*.blg
+.ipynb_checkpoints/
