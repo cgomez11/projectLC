@@ -87,7 +87,78 @@ An important finding from the selection procedure proposed by \cite{fattahi2016a
 
 
 \section{Methods}
-\textit{Catalogue Selection}
+\textit{Simulation datasets}\\
+In this work we used the 
+
+
+\textit{Catalogue Selection}\\
+We defined two strategies to create samples of galaxies by imposing an initial cut on Dark Matter Halo Mass and Stellar Mass. %como definimos DM halo mass? decir que solo tomamos informacion de los subgrupos/subhalos
+Then, we find candidate pairs applied more constraints on other properties including the relative separation, an isolation medium and the relative velocities. A pair is considered when two galaxies are closer to each other.The values constraints are described below:
+\begin{enumerate}[i]
+  \item Pair candidates with a stellar mass in the range $10^{10}M_\odot <M_\star<1.5\times 10^{10}M_\odot$.Pair candidates with a dark matter halo mass in the range $10^{11}M_\odot<M_{halo}<10^{12}M_\odot$. Additionally, the corresponding subhalo must be central, and its stellar mass must be different from zero. 
+  \item The relative separation between the pair ($d_{AB}$)must be at least $700$ kpc. 
+  \item Keep the isolated pairs by discarding the ones with any other galaxy within a radius of $3\times d_{AB}$, with a mass greater than the minimum mass of the pair. 
+  \item The relative radial velocity between the two galaxies of the pair must be in the range $-120 km s^{-1}<V_r<0 km s^{-1}$. 
+\end{enumerate}
+%en DM selection se agrego que sea central y stellar mass diferente de cero
+
+%hablar de combined sample
+We present a new perspective in which criteria is defined following the observational values reported for the properties of the Local Group. These values have a degree of uncertainty, which we fixed to make the constraints broader. These values are presented in table \ref{tab:constraints} with the other ranges defined to create the samples based on Dark Matter halo and stellar mass.  
+%agregar si se aplico restriccion de centrales o no
+\begin{table*} 
+\begin{center}
+\caption{Summary of the constraint values used to select each sample.}
+\label{tab:constraints}
+%\resizebox{\columnwidth}{!}{ %Comando para ajustar a columna
+\begin{tabular}{|c| c | c | c | c | c |}
+\hline
+%\multicolumn{6}{|c|}{\textbf{3FCV}} \\ \hline
+Step &Property & Stellar & DM &Observations & Broader\\ \hline
+1&Stellar mass [$M_\odot$] &[$10^{10}$,$1.5\times 10^{11}$] & -& [$10^{10}$,$10^{11}$]& [$10^{10}$,$10^{11}$]\\
+
+1& Dark matter halo mass [$M_\odot$]& -& [$10^{11}$,$10^{12}$]&[$10^{11}$,$10^{13}$]&[$10^{11}$,$10^{13}$] \\
+
+1 & Stellar mass of the pair [$M_\odot$] &- & -& [$1.29\times10^{11}$,$1.97\times10^{11}$ ]& \\
+
+1 & DM mass of the pair [$M_\odot$]& -& -&[$2.1\times 10^{12}$, $5.7\times 10^{12}$] & \\
+
+2& Relative distance  [kpc]&$\geq700$ &$\geq 700$& [712,862] & \\
+
+3& Isolation radius [kpc]& $3\times d_{AB}$&$3\times d_{AB}$& 1900& \\
+
+4& Radial Velocity [km/s]&[-120,0] & [-120,0]& [-135,-111]& \\
+5 & Tangential Velocity [km/s]& -& -& $\leq 66$& \\
+
+\end{tabular}
+\end{center}
+\end{table*}
+
+\section{Results}
+The change in the number of pairs at each selection step is shown in figure \ref{fig:pairs}, and also, as a density function defined with the respective volume of each simulation. There is a clear tendency of a decreasing number of pairs as progressing from the first criterion to the last one. Even though the number of pairs in Illustris-100 is less than in Illustris-300, when the density is compared, there is almost no change among simulations at different resolutions. The isolation criterion (from step 2 to 3) decreases the number of pairs in a stronger way. When comparing the number of pairs among the three different samples (stellar, DM and combined), there are more pairs at each step when the first cut is on the dark matter halo mass. This could be attributed to the number of objects at the mass constraint. 
+
+%mas parecido entre TNG-100 y TNG-300 con mas particulas
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{NumberPairs.pdf}
+\caption{\label{fig:pairs} Count of pairs (top row) and density defined as $[pairs/Mpc^3]$ at each selection step. In the left and center columns, stage \textit{0} corresponds to the original sample, and in the right column to the preliminary mass cut.}
+\end{figure}
+ 
+ 
+We calculated the average properties of the pair samples at each step and compare them between different simulations. The numbers in the x-axis correspond to the 4 constraints. The properties that are relative to a pair are reported after pair candidates have been selected, which means after applying the mass cut. 
+ 
+\begin{figure*}
+\centering
+\includegraphics[scale=0.4]{avgProp/stellar_avgPropsTNG_100TNG_300.pdf}
+\includegraphics[scale=0.4]{avgProp/DM_avgPropsTNG_100TNG_300.pdf}
+\caption{\label{fig:prop_100_300} Comparison between the average properties at each selection step for Illustris-100 and Illustris-300 (1820 and 1250 particles, respectively). Stage $0$ denotes the original sample.}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\includegraphics[scale=0.4]{avgProp/stellar_avgPropsTNG_300_1250TNG_300_2500}
+\includegraphics[scale=0.4]{avgProp/DM_avgPropsTNG_300_1250TNG_300_2500}
+\caption{\label{fig:prop_300_300} .Comparison between the average properties over each selection step for Illustris-300 at two different resolutions (1250-2500 particles). Stage $0$ denotes the original sample.}
+\end{figure*}
 
  
 
