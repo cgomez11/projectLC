@@ -118,12 +118,30 @@ An important finding from the selection procedure proposed by \cite{fattahi2016a
 %THE STELLAR MASS STRUCTURE OF MASSIVE GALAXIES FROM Z = 0 TO Z = 2.5; SURFACE DENSITY PROFILES AND HALF-MASS RADII: https://arxiv.org/pdf/1208.4363.pdf
 
 \begin{figure*}
-\centering
 \includegraphics[scale=0.4]{full_corner_L205n2500.pdf}
-\caption{\label{fig:prop_100_300} 
-Properties of the main parent sample in the \texttt{LargeVol\_MidRes} simulation.}
-The only condition in this sample is that the low mass partner must
-have a mass in the range $10.0<\log_{\rm 10}M_{\star}/M_{\odot}<11.5$ and that the pair must be isolated. 
+\caption{\label{fig:parent_sample} 
+Properties of the main parent sample in the \texttt{LargeVol\_MidRes}
+simulation.
+There is a total of 14940 pairs used in this sample.
+The only condition on this sample is that the stellar mass of each
+galaxy must be in the range $10.0<\log_{\rm 10}M_{\star}/M_{\odot}<11.5$
+and that the pair must be isolated. 
+The vertical lines over the histograms on the diagonal indicate the
+16-50-84 percentiles.
+The contours on the off-diagonal 2D histograms indicate the
+1$\sigma$, 2$\sigma$ and 3$\sigma$ regions.
+The blue cross indicates observational values}
+\end{figure*}
+
+\begin{figure*}
+\includegraphics[scale=0.4]{full_corner_L205n2500_star_mass_A.pdf}
+\caption{\label{fig:prior_on_parent_sample}
+Same layout as Figure \ref{ref:parent_sample}
+This time the pairs are sampled in such a way that the stellar mass
+distribution of the less massive galaxy follows a gaussian with mean
+value and standard deviation from observations.
+The number of unique pairs in this sample is 1307, but they are
+repeted in such a way as to have 14940 pairs as in the parent sample.}
 \end{figure*}
 
 
@@ -140,8 +158,16 @@ In this work we used the simulations from the TNG project.
 
 
 \textit{Catalogue Selection}\\
-We defined two strategies to create samples of galaxies by imposing an initial cut on Dark Matter Halo Mass and Stellar Mass. %como definimos DM halo mass? decir que solo tomamos informacion de los subgrupos/subhalos
-Then, we find candidate pairs applied more constraints on other properties including the relative separation, an isolation medium and the relative velocities. A pair is considered when two galaxies are closer to each other. To search for pair candidates, padding was applied in all the dimensions of the simulation box by replicating it. The values constraints are described below:
+We defined two strategies to create samples of galaxies by imposing an
+initial cut on Dark Matter Halo Mass and Stellar Mass. %como definimos
+                                %DM halo mass? decir que solo tomamos
+                                %informacion de los subgrupos/subhalos 
+Then, we find candidate pairs applied more constraints on other
+properties including the relative separation, an isolation medium and
+the relative velocities. A pair is considered when two galaxies are
+closer to each other. To search for pair candidates, padding was
+applied in all the dimensions of the simulation box by replicating
+it. The values constraints are described below: 
 \begin{enumerate}[i]
   \item Pair candidates with a stellar mass in the range $10^{10}M_\odot <M_\star<1.5\times 10^{10}M_\odot$.Pair candidates with a dark matter halo mass in the range $10^{11}M_\odot<M_{halo}<10^{12}M_\odot$. Additionally, the corresponding subhalo must be central, and its stellar mass must be different from zero. 
   \item The relative separation between the pair ($d_{AB}$)must be at least $700$ kpc. 
